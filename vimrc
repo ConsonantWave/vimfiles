@@ -1,4 +1,5 @@
 "" Restarting my .vimrc from http://mislav.uniqpath.com/2011/12/vim-revisited/
+"" Also, http://stevelosh.com/blog/2010/09/coming-home-to-vim/
 
 set nocompatible                " choose no compatibility with legacy vi
 syntax enable
