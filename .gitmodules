@@ -7,3 +7,6 @@
 [submodule "bundle/ack"]
 	path = bundle/ack
 	url = git://github.com/mileszs/ack.vim.git
+[submodule "bundle/YankRing"]
+	path = bundle/YankRing
+	url = git://github.com/vim-scripts/YankRing.vim.git
