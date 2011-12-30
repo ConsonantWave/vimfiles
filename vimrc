@@ -10,7 +10,7 @@ call pathogen#infect()
 filetype plugin indent on       " load file type plugins + indentation
 
 "" Fearless leader
-let mapleader ","
+let mapleader = ","
 
 "" Whitespace
 set tabstop=2 shiftwidth=2      " a tab is two spaces (or set this to 4)
@@ -50,3 +50,13 @@ vnoremap <Tab> %
 "" go up and down as I see it
 nnoremap j gj
 nnoremap k gk
+
+"" Switch to previous buffer
+nnoremap <leader><leader> <c-^>
+
+" double percentage sign in command mode is expanded
+" to directory of current file - http://vimcasts.org/e/14
+cnoremap %% <C-R>=expand('%:h').'/'<cr>
+
+map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
+map <leader>F :CommandTFlush<cr>\|:CommandT %%<cr>
