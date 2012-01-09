@@ -40,6 +40,18 @@ set ttyfast                     " fast tty mode
 set laststatus=2                " status line always shows up
 set relativenumber              " now I finally know how many lines I'm using
 
+"" Turn backup off
+set nobackup
+set nowb
+set noswapfile
+
+"" Persistent undo
+set undodir=~/.vim/undodir
+set undofile
+
+"" Remap 0 to ^, since ^ is that much more useful
+map 0 ^
+
 "" I'm not that good at regex already, don't confuse me further
 nnoremap / /\v
 vnoremap / /\v
@@ -64,3 +76,7 @@ map <leader>F :CommandTFlush<cr>\|:CommandT %%<cr>
 
 " Ack!
 map <leader>a :Ack
+
+"" More useful buffer switching
+map <right> :bn<cr>
+map <left> :bp<cr>
