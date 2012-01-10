@@ -13,8 +13,21 @@ filetype plugin indent on       " load file type plugins + indentation
 "" Fearless leader
 let mapleader = ","
 
+"" Background
+if has("gui_running")
+  set guioptions-=T
+  set t_Co=256
+  set background=dark
+  colorscheme moria
+  set nonu
+else
+  colorscheme default
+  set background=dark
+  set nonu
+endif
+
 "" Whitespace
-set tabstop=2 shiftwidth=2      " a tab is two spaces (or set this to 4)
+set tabstop=4 shiftwidth=4      " a tab is two spaces (or set this to 4)
 set expandtab                   " use spaces, not tabs (optional)
 set backspace=indent,eol,start  " backspace through everything in insert mode
 
@@ -35,10 +48,13 @@ set showcmd                     " partial cmd showing
 set hidden                      " unloaded buffers still exist
 set wildmenu                    " incredibly useful tab completion
 set wildmode=list:longest       " wildmode lists all matches, completes up to longest common match
-set cursorline                  " highlight line with cursor
 set ttyfast                     " fast tty mode
 set laststatus=2                " status line always shows up
 set relativenumber              " now I finally know how many lines I'm using
+
+set nocursorcolumn
+set nocursorline
+syntax sync minlines=256
 
 "" Turn backup off
 set nobackup
