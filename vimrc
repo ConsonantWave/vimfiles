@@ -27,8 +27,9 @@ else
 endif
 
 "" Whitespace
-set tabstop=4 shiftwidth=4      " a tab is two spaces (or set this to 4)
+set tabstop=4 shiftwidth=4      " a tab is two spaces (or set this to 2)
 set expandtab                   " use spaces, not tabs (optional)
+set smarttab                    " backspace removes a tab's worth of whitespace
 set backspace=indent,eol,start  " backspace through everything in insert mode
 
 "" Searching
@@ -71,10 +72,6 @@ map 0 ^
 "" I'm not that good at regex already, don't confuse me further
 nnoremap / /\v
 vnoremap / /\v
-
-"" Map <Tab> to % for bracket matching
-nnoremap <Tab> %
-vnoremap <Tab> %
 
 "" go up and down as I see it
 nnoremap j gj
